@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style>
+        .nav {
+            width: 400px;
+            height: 40px;
+            background-color: red;
+            margin:100px auto;
+        }
+        .nav>li{
+            width: 120px;
+            height: 40px;
+            background-color: pink;
+            float:left;
+            margin-left:10px;
+            list-style: none;
+
+        }
+        .nav>li .sub>li{
+            width: 60px;
+            height: 40px;
+            background-color: red;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <li>1
+        <ul class="sub">
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>

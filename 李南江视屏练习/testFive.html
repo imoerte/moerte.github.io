@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>网易注册页面</title>
+    <style>
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+        {
+            margin:0;
+            padding:0;
+        }
+        .header
+        {
+            width: 1519px;
+            height: 50px;
+            box-sizing:border-box;
+            line-height:50px;
+        }
+        .header .logo
+        {
+            width:155px;
+            height:50px;
+            display:inline-block;
+            margin-left:260px;
+            margin-right:20px;
+            vertical-align:middle;
+            float:left;
+        }
+        .header .login
+        {
+            width:48px;
+            height:50px;
+            display:inline-block;
+            float:right;
+            margin-right:1015px;
+        }
+        .header .login h2
+        {
+            font-size:24px;
+            color: #323232;
+            font-weight:normal;
+        }
+        .header span
+        {
+            color: #757575;
+        }
+        .content
+        {
+            width:1519px;
+            height:614px;
+            background-color: #39a6ec;
+        }
+        .content .Top
+        {
+            width:1519px;
+            height:512px;
+            background-color: #39a6ec;
+            box-sizing:border-box;
+        }
+        .content .Top .TopLeft
+        {
+            width:415px;
+            height:420px;
+            float:left;
+            margin-left:324px;
+        }
+        .content .Top .TopRight
+        {
+            width:450px;
+            height:432px;
+            float:right;
+            margin-top:30px;
+            margin-right:200px;
+            background-color: #e2f2fc;
+        }
+        .content .Top .TopRight .TopRightLogin
+        {
+            width:450px;
+            height:338px;
+        }
+        .content .Top .TopRight .TopRightLogin .TopRightLoginHeader
+            {
+                width:450px;
+                height:50px;
+                line-height:50px;
+            }
+        .content .Top .TopRight .TopRightLogin .TopRightLoginHeader h2
+        {
+            font-size:24px;
+            color: #323232;
+            font-weight:normal;
+            text-align:center;
+        }
+        .content .Top .TopRight .TopRightLogin .TopRightLoginContent
+        {
+            width:350px;
+            height:253px;
+            margin-left:50px;
+            margin-top:13px;
+            margin-right:50px;
+        }
+        .content .Top .TopRight .TopRightLogin .TopRightLoginContent form p input
+        {
+            width:350px;
+            height:45px;
+            line-height:45px;
+            border:1px solid #c5cddb;
+            border-left:none;
+            margin-top:35px;
+        }
+        .content .Top .TopRight .TopRightLogin .TopRightLoginContent form p input[type="password"]
+        {
+            margin-top:15px;
+            background-color: #ffffff;
+        }
+        .content .Top .TopRight .TopRightLogin .TopRightLoginContent form p input[type="range"]
+        {
+            margin-top:15px;
+            background-color:#ffffff;
+        }
+        .content .Top .TopRight .TopRightLogin .TopRightLoginContent form p:nth-child(4)
+        {
+            font-size:12px;
+            font-family: "宋体";
+            font-weight: bold;
+        }
+        .content .Top .TopRight .TopRightLogin .TopRightLoginContent form p:nth-child(4) a
+        {
+            text-decoration: none;
+            color: #4aafe9;
+        }
+        .content .Top .TopRight .TopRightLogin .TopRightLoginContent form p input[type="submit"]
+        {
+            font-size:24px;
+            color: #323232;
+            font-weight:normal;
+            background-color: #79b1d5;
+            margin-top:50px;
+        }
+        .content .Top .TopRight .TopRightLink
+        {
+            width:450px;
+            height:94px;
+        }
+        .content .Bottom
+        {
+            width:1519px;
+            height:102px;
+            background-color:yellowgreen;
+        }
+        .footer
+        {
+            width:1519px;
+            height:159px;
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <a href="#" title="网易账号中心">
+            <img src="images/index.png" alt="加载失败">
+        </a>
+    </div>
+    <span>|</span>
+   <div class="login">
+       <h2>登录</h2>
+   </div>
+</div>
+<div class="content">
+    <div class="Top">
+        <div class="TopLeft">
+            <a href="#" >
+                <img src="images/ad.jpg" alt="无法显示">
+            </a>
+        </div>
+        <div class="TopRight">
+            <div class="TopRightLogin">
+                <div class="TopRightLoginHeader">
+                    <h2>普通登陆</h2>
+                </div>
+                <div class="TopRightLoginContent">
+                    <form>
+                        <p><input type="email" placeholder="邮箱"/></p>
+                        <p><input type="password" placeholder="密码"/></p>
+                        <p><input type="range" /></p>
+                        <p>使用<a href="#">网易账号管家</a>，全面保护您的账号！</p>
+                        <p><input type="submit" value="登陆"/></p>
+                    </form>
+                </div>
+            </div>
+            <div class="TopRightLink">
+            </div>
+        </div>
+    </div>
+    <div class="Bottom">
+        <img src="images/contentBottom.png" alt="无法显示">
+    </div>
+</div>
+<div class="footer">
+    <img src="images/footer.png" alt="无法显示">
+</div>
+</body>
+</html>

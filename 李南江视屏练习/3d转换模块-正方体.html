@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d转换模块-正方体练习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width:200px;
+            height: 200px;
+            margin: 200px auto;
+            position:relative;
+            perspective:800px;
+            transform-style:preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg);
+
+        }
+        li{
+            list-style: none;
+            width:200px;
+            height: 200px;
+            text-align:center;
+            font-size:60px;
+            line-height: 200px;
+            position:absolute;
+            background-color: red;
+        }
+        li:nth-child(1){
+            transform:translateZ(100px);
+            background-color: red;
+        }
+        li:nth-child(2){
+            transform:rotateY(90deg) translateZ(100px);
+            background-color: pink;
+        }
+        li:nth-child(3){
+            transform:translateZ(-100px);
+            background-color: green;
+        }
+        li:nth-child(4){
+            transform:rotateY(90deg) translateZ(-100px);
+            background-color: deeppink;
+        }
+        li:nth-child(5){
+            transform:rotateX(90deg) translateZ(100px);
+            background-color: darkolivegreen;
+        }
+        li:nth-child(6){
+            transform:rotateY(90deg) translateZ(-100px);
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</body>
+</html>

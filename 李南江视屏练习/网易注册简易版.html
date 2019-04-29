@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>test注册页面</title>
+
+    <style>
+        /*清空默认边距*/
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+
+        /*头部样式*/
+        .header {width: 1519px;height: 50px;box-sizing:border-box;line-height:50px;}
+        .header .login {width:48px;height:50px;display:inline-block;float:right;margin-right:1015px;}
+        .header .login h2 {font-size:24px;color: #323232;font-weight:normal;}
+        .header span {color: #757575;}
+
+
+
+        /*中间内容区样式*/
+        .content {width:1519px;height:614px;background-color: #39a6ec;position:relative;}
+        /*右边登陆部分*/
+        .content  .TopRight {width:450px;height:432px;float:right;margin-top:30px;margin-right:200px;background-color: #e2f2fc;display:block;position:absolute;top:0px;left:0px;}
+        #denglukuang{z-index:2;}
+        #zhucekuang{display:none;}
+
+        .content  .TopRight .TopRightLogin {width:450px;height:338px;}
+        .content  .TopRight .TopRightLogin .TopRightLoginHeader {width:450px;height:50px;line-height:50px;}
+        .content  .TopRight .TopRightLogin .TopRightLoginHeader h2 {font-size:24px;color: #323232;font-weight:normal;text-align:center;}
+        /*登陆框内容*/
+        .content  .TopRight .TopRightLogin .TopRightLoginContent {width:300px;height:253px;margin-left:50px;margin-top:13px;margin-right:50px;}
+        .content  .TopRight .TopRightLogin .TopRightLoginContent form p{font-size:20px;margin-top:15px;}
+        .content  .TopRight .TopRightLogin .TopRightLoginContent form p input[type="password"] {margin-top:15px;}
+        .content  .TopRight .TopRightLogin .TopRightLoginContent form p input[type="submit"] {width:100px; font-size:24px;margin-top:50px;}
+
+        /*翻转动画*/
+        .fanzhuan{
+            animation:Flipping 3s linear infinite normal;
+        }
+        @keyframes Flipping{
+            from{
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotateY(90deg);
+            }
+        }
+
+        .fanzhuan2{
+            animation:Flipping2 3s linear infinite normal;
+        }
+        @keyframes Flipping2{
+            from{
+                transform: rotateY(270deg);
+            }
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+
+        /*底部样式*/
+        .footer {width:1519px;height:159px;background-color:yellow;}
+    </style>
+    <script src="../jq22jQueryDownload808920161027/jQueryDownload/jquery-1.9.1.min.js"></script>
+
+    <script>
+        var onOff = true;//标识符1标识当前页面是登陆页面，0标识注册页面
+
+        function Change(){
+            var timer = null;
+            var denglukuang = document.getElementById("denglukuang");
+            var zhucekuang = document.getElementById("zhucekuang");
+
+            if(onOff){
+                $("#denglukuang").addClass("fanzhuan");
+
+                timer = setTimeout(function(){
+                    denglukuang.style.display = "none";
+                    $("#denglukuang").removeClass("fanzhuan");
+
+                    zhucekuang.style.display = "block";
+                    $("#zhucekuang").addClass("fanzhuan2");
+                    timer = setTimeout(function(){
+                        // $("#zhucekuang").removeClass("fanzhuan2");
+                        $("#zhucekuang").removeClass("fanzhuan2");
+                        clearTimeout(timer);
+                    },3000);
+                },3000);
+                onOff = false;
+            }
+            else{
+                $("#zhucekuang").addClass("fanzhuan");
+                timer = setTimeout(function(){
+                    zhucekuang.style.display = "none";
+                    $("#zhucekuang").removeClass("fanzhuan");
+
+                    denglukuang.style.display = "block";
+                    $("#denglukuang").addClass("fanzhuan2");
+
+                    timer = setTimeout(function(){
+                        $("#denglukuang").removeClass("fanzhuan2");
+                        clearTimeout(timer);
+                    },3000);
+                },3000);
+                onOff = true;
+            }
+        };
+
+    </script>
+
+</head>
+
+
+<body>
+<div class="header">
+   <div class="login">
+       <h2>登录</h2>
+   </div>
+</div>
+<div class="content">
+    <div class="TopRight" id="denglukuang">
+        <div class="TopRightLogin">
+            <div class="TopRightLoginHeader">
+                <h2>登陆</h2>
+            </div>
+            <div class="TopRightLoginContent">
+                <form>
+                    <p>账号：<input type="text" name="name" /></p>
+                    <p>密码：<input type="password" name="password"/></p>
+                    <p><input type="submit" value="登陆" onclick="Change();"/></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="TopRight" id="zhucekuang">
+        <div class="TopRightLogin">
+            <div class="TopRightLoginHeader">
+                <h2>注册</h2>
+            </div>
+            <div class="TopRightLoginContent">
+                <form>
+                    <p>账号：<input type="text" name="name" /></p>
+                    <p>密码：<input type="password" name="password"/></p>
+                    <p><input type="submit" value="注册" onclick="Change();"/></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+</body>
+
+</html>
